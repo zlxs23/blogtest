@@ -1,0 +1,18 @@
+{% extends 'blog_base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="article">
+            <div class="article-info">
+                <p class="pull-right" title="发表日期"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{{ object.created|date:"Y/n/j G:i" }}</p>
+                <p title="阅读次数"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&times;{{ object.views }}</p>
+            </div>
+            <div class="article-content">
+                {% autoescape off %}
+                    {{ object.content }}
+                {% endautoescape %}
+                <p class="updated">---------- 全文完 ----------</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

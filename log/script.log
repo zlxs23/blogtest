@@ -1,0 +1,880 @@
+2016-02-21 21:40:27,602 [Thread-2:8252] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/3/
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.content
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "A:\Python3.5\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1442, in changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 723, in get_object
+    return queryset.get(**{field.name: object_id})
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.content
+2016-02-21 21:42:33,777 [Thread-2:14620] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/3/
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.content
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "A:\Python3.5\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1442, in changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 723, in get_object
+    return queryset.get(**{field.name: object_id})
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.content
+2016-02-21 21:42:43,492 [Thread-3:13888] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/3/
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.content
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "A:\Python3.5\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1442, in changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 723, in get_object
+    return queryset.get(**{field.name: object_id})
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.content
+2016-02-21 21:42:45,273 [Thread-5:10808] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/3/
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.content
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1519, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "A:\Python3.5\lib\contextlib.py", line 30, in inner
+    return func(*args, **kwds)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1442, in changeform_view
+    obj = self.get_object(request, unquote(object_id), to_field)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 723, in get_object
+    return queryset.get(**{field.name: object_id})
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.content
+2016-02-21 21:42:57,281 [Thread-7:16504] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/article/
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.content
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\sites.py", line 233, in inner
+    return view(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 34, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "A:\Python3.5\lib\site-packages\django\utils\decorators.py", line 30, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "A:\Python3.5\lib\site-packages\django\contrib\admin\options.py", line 1638, in changelist_view
+    media = self.media + formset.media
+  File "A:\Python3.5\lib\site-packages\django\forms\formsets.py", line 391, in media
+    if self.forms:
+  File "A:\Python3.5\lib\site-packages\django\utils\functional.py", line 60, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "A:\Python3.5\lib\site-packages\django\forms\formsets.py", line 142, in forms
+    forms = [self._construct_form(i) for i in range(self.total_form_count())]
+  File "A:\Python3.5\lib\site-packages\django\forms\formsets.py", line 117, in total_form_count
+    initial_forms = self.initial_form_count()
+  File "A:\Python3.5\lib\site-packages\django\forms\models.py", line 567, in initial_form_count
+    return len(self.get_queryset())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.content
+2016-02-21 22:14:04,299 [Thread-35:8640] [django.request:170] [base:get_response] [WARNING]- Not Found: /admin/upload/kindeditor
+2016-02-21 22:20:25,811 [Thread-10:2544] [django.request:170] [base:get_response] [WARNING]- Not Found: /admin/upload/kindeditor
+2016-02-21 23:16:42,627 [Thread-2:13276] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.author
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "A:\Python3.5\lib\site-packages\django\core\paginator.py", line 117, in __len__
+    return len(self.object_list)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.author
+2016-02-21 23:17:09,244 [Thread-3:8836] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.author
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "A:\Python3.5\lib\site-packages\django\core\paginator.py", line 117, in __len__
+    return len(self.object_list)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.author
+2016-02-21 23:17:18,116 [Thread-4:10924] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.author
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "A:\Python3.5\lib\site-packages\django\core\paginator.py", line 117, in __len__
+    return len(self.object_list)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.author
+2016-02-21 23:17:38,250 [Thread-5:18468] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.author
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "A:\Python3.5\lib\site-packages\django\core\paginator.py", line 117, in __len__
+    return len(self.object_list)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.author
+2016-02-21 23:19:05,297 [Thread-6:17336] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.author
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "A:\Python3.5\lib\site-packages\django\core\paginator.py", line 117, in __len__
+    return len(self.object_list)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.author
+2016-02-21 23:19:31,255 [Thread-2:17452] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.author
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "A:\Python3.5\lib\site-packages\django\core\paginator.py", line 117, in __len__
+    return len(self.object_list)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.author
+2016-02-21 23:19:34,875 [Thread-3:13364] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: blog_article.author
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "A:\Python3.5\lib\site-packages\django\core\paginator.py", line 117, in __len__
+    return len(self.object_list)
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "A:\Python3.5\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "A:\Python3.5\lib\site-packages\django\db\models\sql\compiler.py", line 829, in execute_sql
+    cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 658, in reraise
+    raise value.with_traceback(tb)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "A:\Python3.5\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: blog_article.author
+2016-02-22 16:25:33,878 [Thread-3:6568] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-22 16:30:56,530 [Thread-2:6940] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-02-22 16:31:08,954 [Thread-3:7712] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-02-22 16:31:42,494 [Thread-2:212] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-02-22 16:32:59,010 [Thread-3:5148] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-02-22 16:32:59,951 [Thread-4:2928] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-02-22 16:33:00,248 [Thread-5:1620] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-02-22 16:33:41,061 [Thread-2:4960] [django.request:170] [base:get_response] [WARNING]- Not Found: /blog/
+2016-02-22 16:33:42,430 [Thread-3:5680] [django.request:170] [base:get_response] [WARNING]- Not Found: /blog/
+2016-02-22 16:36:16,148 [Thread-2:7184] [django.request:170] [base:get_response] [WARNING]- Not Found: /blog/
+2016-02-22 16:36:24,895 [Thread-3:6944] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "A:\Python3.5\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "A:\Python3.5\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'blogtest.article_detail' with arguments '('bhh',)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "A:\Python3.5\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "A:\Python3.5\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'article_detail' with arguments '('bhh',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['$article/(?P<title>\\S+)$']
+2016-02-22 16:36:35,974 [Thread-2:7908] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 501, in render
+    current_app=current_app)
+  File "A:\Python3.5\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "A:\Python3.5\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'blogtest.article_detail' with arguments '('bhh',)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "A:\Python3.5\lib\site-packages\django\core\handlers\base.py", line 164, in get_response
+    response = response.render()
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 158, in render
+    self.content = self.rendered_content
+  File "A:\Python3.5\lib\site-packages\django\template\response.py", line 135, in rendered_content
+    content = template.render(context, self._request)
+  File "A:\Python3.5\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "A:\Python3.5\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "A:\Python3.5\lib\site-packages\django\utils\six.py", line 659, in reraise
+    raise value
+  File "A:\Python3.5\lib\site-packages\django\template\defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "A:\Python3.5\lib\site-packages\django\core\urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "A:\Python3.5\lib\site-packages\django\core\urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'article_detail' with arguments '('bhh',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['$article/(?P<title>\\S+)$']
+2016-02-22 16:37:07,588 [Thread-2:6492] [django.request:170] [base:get_response] [WARNING]- Not Found: /
+2016-02-22 16:37:08,743 [Thread-3:984] [django.request:170] [base:get_response] [WARNING]- Not Found: /
