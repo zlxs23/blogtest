@@ -1,2 +1,2 @@
-django ==1.9
-django-suit==0.2
+django ==1.8
+django-suit==0.2.16
