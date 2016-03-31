@@ -1,1 +1,1 @@
-# blog
+# a blog made by django
